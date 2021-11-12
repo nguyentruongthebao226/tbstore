@@ -1,0 +1,25 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} -s [OR]
+RewriteCond %{REQUEST_FILENAME} -l [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^.*$ - [NC,L]
+
+RewriteRule      index.html                                                      index.php?module=default&controller=index&action=index 
+RewriteRule      about.html                                                      index.php?module=default&controller=index&action=about
+RewriteRule      contact.html                                                    index.php?module=default&controller=index&action=contact
+RewriteRule      products.html                                                   index.php?module=default&controller=product&action=list&options=all-products
+RewriteRule      sale-off.html                                                   index.php?module=default&controller=product&action=list&options=saleoff-products
+RewriteRule      special.html                                                    index.php?module=default&controller=product&action=list&options=special-products
+RewriteRule      register.html                                                   index.php?module=default&controller=index&action=register
+RewriteRule      login.html                                                      index.php?module=default&controller=index&action=login
+RewriteRule      my-account.html                                                 index.php?module=default&controller=user&action=index
+RewriteRule      history.html                                                    index.php?module=default&controller=user&action=history
+RewriteRule      cart.html                                                       index.php?module=default&controller=user&action=cart
+RewriteRule      blog.html                                                       index.php?module=default&controller=blog&action=list
+RewriteRule      ([A-Za-z0-9_-]+)-([0-9]+)\.html                                 index.php?module=default&controller=product&action=list&category_id=$2
+RewriteRule      ([A-Za-z0-9_-]+)/([A-Za-z0-9_-]+)-([0-9]+)-([0-9]+)\.html       index.php?module=default&controller=product&action=detail&category_id=$3&product_id=$4
+RewriteRule      ([A-Za-z0-9_-]+)/([0-9]+)\.html                                 index.php?module=default&controller=blog&action=detail&blog_id=$2
+RewriteRule      muahang-thanhcong.html                                          index.php?module=default&controller=index&action=notice&type=buy-success
+RewriteRule      dangky-thanhcong.html                                           index.php?module=default&controller=index&action=notice&type=register-success
+RewriteRule      duongdankhonghople.html                                         index.php?module=default&controller=index&action=notice&type=not-url
+RewriteRule      permission.html                                                 index.php?module=default&controller=index&action=notice&type=not-permission

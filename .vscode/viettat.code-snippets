@@ -1,0 +1,45 @@
+{
+	
+"Echo PHP": {
+	"prefix": "z_echo",
+	"body": [
+		"echo '<br />VALUE: ' . $${1:value};"
+	],
+	"description": "Print a value in PHP"
+},
+
+"Print PHP": {
+	"prefix": "z_pre",
+	"body": [
+		"echo '<pre>';",
+		"print_r($${1:array});",
+		"echo '</pre>';",
+	],
+	"description": "Print a Array in PHP"
+},
+
+"Die PHP": {
+	"prefix": "z_die",
+	"body": [
+		"die('Function Die...');"
+	],
+	"description": "Print die() function in PHP"
+},
+
+"Method PHP": {
+	"prefix": "z_me",
+	"body": [
+		"echo '<h3>' . __METHOD__ . '</h3>';"
+	],
+	"description": "Print die() function in PHP"
+},
+
+"__File__ PHP": {
+	"prefix": "z_file",
+	"body": [
+		"echo '<h3>' . __FILE__ . '</h3>';"
+	],
+	"description": "Print die() function in PHP"
+},
+
+}

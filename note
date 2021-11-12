@@ -1,0 +1,32 @@
+Tạm tắt phân quyền dòng 37 - 41 file Bootstrap
+
+RewriteRule index.html index.php?module=default&controller=index&action=about
+
+RewriteRule index.html index.php?module=default&controller=index&action=contact
+
+RewriteRule index.html index.php?module=default&controller=product&action=list&options=all-products
+
+RewriteRule index.html index.php?module=default&controller=product&action=list&category_id=27
+
+RewriteRule index.html index.php?module=default&controller=product&action=detail&category_id=27&product_id=44
+
+RewriteRule index.html index.php?module=default&controller=index&action=register
+
+RewriteRule index.html index.php?module=default&controller=index&action=login
+
+RewriteRule index.html index.php?module=default&controller=user&action=index
+
+RewriteRule index.html index.php?module=default&controller=user&action=history
+
+RewriteRule index.html index.php?module=default&controller=user&action=cart
+
+
+http://localhost/storetb/index.php?module=default&controller=product&action=list&category_id=41
+
+Loại bỏ khoảng trắng dư thừa    Áo khoác adidas 
+
+bỏ kí tự có dấu                 Ao khoac adidas
+
+Thay thế khoảng trắng = ' - '   Ao-khoac-adidas 
+
+Bỏ chữ in hoa                   ao-khoac-adidas
